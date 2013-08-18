@@ -1,0 +1,45 @@
+var kolo = ""
+var A = 0;
+var B = 0;
+var C = 0;
+var D = 0;
+var Sum = 0;
+
+function getData(e) {
+    e.preventDefault();
+}
+
+function SubmitUnit()
+{
+	//alert("it is here");
+	A = parseInt(document.getElementById("A").value, 10);
+	B = parseInt(document.getElementById("B").value, 10);
+	C = parseInt(document.getElementById("C").value, 10);
+	D = parseInt(document.getElementById("D").value, 10);
+	Sum = A + B + C + D
+
+	if (Sum < 15  || Sum > 15)
+	{
+		alert("Total unites must be equal 15");
+		
+		return;
+	}
+
+	else
+	{
+						$.ajax({type: "GET", 
+                            cache: false,
+                            contentType: 'application/html; charset=utf-8',
+                            url: "/createunit", 
+                            dataType: "html",
+                             data: { A: A, B: B, C: C, D: D },
+                             success: function (result) {
+            					window.location.replace("http://localhost:3000/table_wars/new");
+          
+        						}
+                            
+                        });
+	}
+
+
+}

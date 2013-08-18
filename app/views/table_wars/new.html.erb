@@ -1,0 +1,97 @@
+<h1>New table_war</h1>
+
+<%= render 'form' %>
+
+<div id = "Arrayids" style = "display:none">
+  <%= @Arrayids %>
+
+</div>
+
+
+
+<div id = "Arrayfoundclick" style = "display:none">
+  <%= @Arrayfoundclick %>
+
+</div>
+
+<div id = "Arrayfoundunit" style = "display:none">
+  <%= @Arrayfoundunit %>
+
+</div>
+
+<div id = "Arrayfoundname" style = "display:none">
+  <%= @Arrayfoundname %>
+
+</div>
+
+<div id = "AA" style = "display:none">
+  <%= @AA %>
+
+</div>
+
+<div id = "BB" style = "display:none">
+  <%= @BB %>
+
+</div>
+
+<div id = "CC" style = "display:none">
+  <%= @CC %>
+
+</div>
+
+<div id = "DD" style = "display:none">
+  <%= @DD %>
+
+</div>
+
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="/assets/writetable.js.erb"></script>
+
+    <div id = "dialog" style = "display:none">
+		<div> 
+			Attack Speed 
+		</div>
+
+  			<input id ="attackspeed" type = "text" />
+
+  			<div>
+          Accuracy	
+  			</div>
+        <input id ="accuracy" type = "text" />
+
+
+        <div>
+          Speed  
+        </div>
+        <input id ="speed" type = "text" />
+
+        <div>
+          Attack Damage  
+        </div>
+        <input id ="attackdamage" type = "text" />
+
+        <div>
+          Defense  
+        </div>
+        <input id ="defense" type = "text" />
+
+        <div>
+          No of soldiers  
+        </div>
+        <input id ="noofsoliders" type = "text" />
+
+        <div>
+
+        <button id = "submitfields" onclick = "FunctionSubmit()" type = "submit">
+          Submit
+        </button>
+
+      </div>
+
+  			
+    </div>
+
+
+<%= link_to 'Back', table_wars_path %>
